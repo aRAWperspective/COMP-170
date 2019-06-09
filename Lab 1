@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class FirstJavaApp {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter a number: ");
+        int a = sc.nextInt();
+
+        System.out.print("Enter a number: ");
+        int b = sc.nextInt();
+
+        System.out.print("Enter a number: ");
+        int c = sc.nextInt();
+
+        System.out.print("Enter a number: ");
+        int d = sc.nextInt();
+
+        System.out.print("Enter a number: ");
+        int e = sc.nextInt();
+
+        System.out.print("Enter a number: ");
+        int f = sc.nextInt();
+
+        int result = (a + b * c - d) / (e + f);
+        System.out.print("Your formula is: ");
+        System.out.format("(%d + %d * %d - %d) / (%d + %d)\n", a, b, c, d, e, f);
+        System.out.println("The result is: " + result);
+
+    }
+}
