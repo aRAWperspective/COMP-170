@@ -1,0 +1,51 @@
+import java.util.Scanner;
+
+public class IfDemo {
+    public static void main(String[] args) {
+        // boot up the application
+        IfDemo demo = new IfDemo();
+        demo.run();
+    }
+
+    // null is not the same as void
+    public void run() {
+        Scanner keyboard = new Scanner(System.in);
+
+        System.out.println("Super Duper Speed Checker!");
+        System.out.print("Enter the speed limit: ");
+        int speedLimit = keyboard.nextInt();
+
+        System.out.print("Enter the driver's current speed: ");
+        int curSpeed = keyboard.nextInt();
+
+        if (this.isSpeeding(speedLimit, curSpeed)) {
+            System.out.println("SLOW DOWN!");
+        } else {
+            System.out.println("Speed up! I got places to go!");
+        }
+    }
+
+    public boolean isSpeeding(int speedLimit, int currentSpeed) {
+        return currentSpeed > speedLimit;
+
+        /*
+        ## Alternative approach 1
+        if (currentSpeed > speedLimit) {
+            return true;
+        } else {
+            return false;
+        }
+        */
+
+        /*
+        ## Alternative approach 2
+        boolean result;
+        if (currentSpeed > speedLimit) {
+            result = true;
+        } else {
+            result = false;
+        }
+        return result;
+        */
+    }
+}
