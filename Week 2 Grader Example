@@ -1,0 +1,63 @@
+public class Grader {
+    public static void main(String[] args) {
+        Grader grader = new Grader();
+
+//        System.out.println(grader.workingGrader(73));
+        System.out.println(grader.flawedGrader(85));
+//        System.out.println(grader.workingGrader(95));
+    }
+
+    public char workingGrader(double percentage) {
+        char letterGrade;
+
+        if (percentage >= 90) {
+            letterGrade = 'A';
+        } else if (percentage >= 80) {
+            letterGrade = 'B';
+        } else if (percentage >= 70) {
+            letterGrade = 'C';
+        } else if (percentage >= 60) {
+            letterGrade = 'D';
+        } else {
+            letterGrade = 'F';
+        }
+
+        return letterGrade;
+    }
+
+    public char workingGrader2(double percentage) {
+        char letterGrade;
+
+        if (percentage >= 60 && percentage < 70) {
+            letterGrade = 'D';
+        } else if (percentage >= 70 && percentage < 80) {
+            letterGrade = 'C';
+        } else if (percentage >= 80 && percentage <90) {
+            letterGrade = 'B';
+        } else if (percentage >= 90) {
+            letterGrade = 'A';
+        } else {
+            letterGrade = 'F';
+        }
+
+        return letterGrade;
+    }
+
+    public char flawedGrader(double percentage) {
+        char letterGrade;
+
+        if (percentage >= 60) {
+            letterGrade = 'D';
+        } else if (percentage >= 70) {
+            letterGrade = 'C';
+        } else if (percentage >= 80) {
+            letterGrade = 'B';
+        } else if (percentage >= 90) {
+            letterGrade = 'A';
+        } else {
+            letterGrade = 'F';
+        }
+
+        return letterGrade;
+    }
+}
